@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>আল ফালাহ কল্যাণ সমিতি</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f7f5;
+      color: #222;
+    }
+
+    header {
+      background: #087443;
+      color: white;
+      padding: 22px 15px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 25px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 14px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px 15px;
+    }
+
+    .welcome {
+      background: white;
+      padding: 25px 20px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+    }
+
+    .welcome h2 {
+      color: #087443;
+      margin-bottom: 10px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .card {
+      background: white;
+      padding: 22px 10px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+      cursor: pointer;
+    }
+
+    .card .icon {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .card h3 {
+      color: #087443;
+      font-size: 17px;
+    }
+
+    .card p {
+      font-size: 13px;
+      margin-top: 5px;
+      color: #666;
+    }
+
+    .admin {
+      margin-top: 20px;
+      background: #087443;
+      color: white;
+      padding: 18px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .admin button {
+      margin-top: 10px;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 8px;
+      background: white;
+      color: #087443;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 10px;
+      color: #777;
+      font-size: 13px;
+    }
+
+    @media (min-width: 600px) {
+      .cards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🌿 আল ফালাহ কল্যাণ সমিতি</h1>
+    <p>ঐক্য • সহযোগিতা • উন্নয়ন</p>
+  </header>
+
+  <div class="container">
+
+    <div class="welcome">
+      <h2>স্বাগতম</h2>
+      <p>
+        আল ফালাহ কল্যাণ সমিতির অফিসিয়াল ম্যানেজমেন্ট সিস্টেমে
+        আপনাকে স্বাগতম।
+      </p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">👥</div>
+        <h3>সদস্য</h3>
+        <p>সদস্যদের তথ্য</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">💰</div>
+        <h3>মাসিক চাঁদা</h3>
+        <p>মাসিক জমার হিসাব</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">💵</div>
+        <h3>এককালীন চাঁদা</h3>
+        <p>এককালীন জমার হিসাব</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📈</div>
+        <h3>বিনিয়োগ</h3>
+        <p>বিনিয়োগ ও লাভ-ক্ষতি</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🏦</div>
+        <h3>ঋণ</h3>
+        <p>ঋণ ও কিস্তির হিসাব</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">⚠️</div>
+        <h3>জরিমানা</h3>
+        <p>জরিমানার হিসাব</p>
+      </div>
+
+    </div>
+
+    <div class="admin">
+      <h3>🔐 অ্যাডমিন প্যানেল</h3>
+      <p>হিসাব পরিচালনার জন্য অ্যাডমিন লগইন করুন।</p>
+      <button onclick="alert('Admin Panel পরে যুক্ত করা হবে')">
+        Admin Login
+      </button>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2026 আল ফালাহ কল্যাণ সমিতি
+  </footer>
+
+</body>
+</html>
