@@ -1,194 +1,356 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>আল ফালাহ কল্যাণ সমিতি</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>আল ফালাহ কল্যাণ সমিতি</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:Arial,"Noto Sans Bengali",sans-serif;
+}
 
-    body {
-      background: #f4f7f5;
-      color: #222;
-    }
+body{
+  background:#f4f7f5;
+  color:#222;
+}
 
-    header {
-      background: #087443;
-      color: white;
-      padding: 22px 15px;
-      text-align: center;
-    }
+header{
+  background:#087443;
+  color:white;
+  padding:25px 15px;
+  text-align:center;
+}
 
-    header h1 {
-      font-size: 25px;
-      margin-bottom: 8px;
-    }
+header h1{
+  font-size:26px;
+  margin-bottom:8px;
+}
 
-    header p {
-      font-size: 14px;
-    }
+header p{
+  font-size:14px;
+}
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px 15px;
-    }
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:15px;
+}
 
-    .welcome {
-      background: white;
-      padding: 25px 20px;
-      border-radius: 15px;
-      text-align: center;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-      margin-bottom: 20px;
-    }
+.welcome{
+  background:white;
+  padding:25px 20px;
+  border-radius:15px;
+  text-align:center;
+  margin-bottom:20px;
+  box-shadow:0 3px 12px rgba(0,0,0,.08);
+}
 
-    .welcome h2 {
-      color: #087443;
-      margin-bottom: 10px;
-    }
+.welcome h2{
+  color:#087443;
+  margin-bottom:10px;
+}
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-    }
+.welcome p{
+  line-height:1.8;
+}
 
-    .card {
-      background: white;
-      padding: 22px 10px;
-      border-radius: 15px;
-      text-align: center;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.07);
-      cursor: pointer;
-    }
+.cards{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+}
 
-    .card .icon {
-      font-size: 32px;
-      margin-bottom: 8px;
-    }
+.card{
+  background:white;
+  padding:22px 15px;
+  border-radius:15px;
+  text-align:center;
+  box-shadow:0 3px 10px rgba(0,0,0,.07);
+  cursor:pointer;
+  transition:.2s;
+}
 
-    .card h3 {
-      color: #087443;
-      font-size: 17px;
-    }
+.card:hover{
+  transform:translateY(-3px);
+}
 
-    .card p {
-      font-size: 13px;
-      margin-top: 5px;
-      color: #666;
-    }
+.icon{
+  font-size:32px;
+  margin-bottom:8px;
+}
 
-    .admin {
-      margin-top: 20px;
-      background: #087443;
-      color: white;
-      padding: 18px;
-      border-radius: 15px;
-      text-align: center;
-    }
+.card h3{
+  color:#087443;
+  font-size:17px;
+  margin-bottom:6px;
+}
 
-    .admin button {
-      margin-top: 10px;
-      padding: 10px 25px;
-      border: none;
-      border-radius: 8px;
-      background: white;
-      color: #087443;
-      font-weight: bold;
-    }
+.card p{
+  font-size:13px;
+  color:#555;
+}
 
-    footer {
-      text-align: center;
-      padding: 25px 10px;
-      color: #777;
-      font-size: 13px;
-    }
+.section{
+  background:white;
+  margin-top:20px;
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 3px 10px rgba(0,0,0,.07);
+}
 
-    @media (min-width: 600px) {
-      .cards {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-  </style>
+.section h2{
+  color:#087443;
+  margin-bottom:15px;
+  border-bottom:2px solid #087443;
+  padding-bottom:8px;
+}
+
+.notice{
+  background:#f0fff7;
+  border-left:4px solid #087443;
+  padding:12px;
+  margin-bottom:10px;
+  border-radius:5px;
+  line-height:1.7;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+th,td{
+  padding:10px 6px;
+  border-bottom:1px solid #ddd;
+  text-align:center;
+  font-size:14px;
+}
+
+th{
+  background:#087443;
+  color:white;
+}
+
+.total{
+  margin-top:15px;
+  padding:15px;
+  background:#e8f7ef;
+  border-radius:10px;
+  text-align:center;
+  font-size:18px;
+  font-weight:bold;
+  color:#087443;
+}
+
+footer{
+  margin-top:25px;
+  background:#075d36;
+  color:white;
+  text-align:center;
+  padding:20px 10px;
+  line-height:1.8;
+}
+
+@media(max-width:600px){
+  .cards{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  header h1{
+    font-size:22px;
+  }
+
+  .card{
+    padding:18px 8px;
+  }
+
+  .card h3{
+    font-size:15px;
+  }
+
+  table{
+    font-size:12px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h1>🌿 আল ফালাহ কল্যাণ সমিতি</h1>
-    <p>ঐক্য • সহযোগিতা • উন্নয়ন</p>
-  </header>
+<header>
+  <h1>🌿 আল ফালাহ কল্যাণ সমিতি</h1>
+  <p>ঐক্য • সহযোগিতা • কল্যাণ</p>
+</header>
 
-  <div class="container">
+<div class="container">
 
-    <div class="welcome">
-      <h2>স্বাগতম</h2>
-      <p>
-        আল ফালাহ কল্যাণ সমিতির অফিসিয়াল ম্যানেজমেন্ট সিস্টেমে
-        আপনাকে স্বাগতম।
-      </p>
+  <div class="welcome">
+    <h2>আসসালামু আলাইকুম</h2>
+    <p>
+      আল ফালাহ কল্যাণ সমিতির অফিসিয়াল ব্যবস্থাপনা পোর্টালে
+      আপনাকে স্বাগতম।
+    </p>
+  </div>
+
+  <div class="cards">
+
+    <div class="card" onclick="showSection('members')">
+      <div class="icon">👥</div>
+      <h3>সদস্য তালিকা</h3>
+      <p>সমিতির সদস্যদের তথ্য</p>
     </div>
 
-    <div class="cards">
-
-      <div class="card">
-        <div class="icon">👥</div>
-        <h3>সদস্য</h3>
-        <p>সদস্যদের তথ্য</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">💰</div>
-        <h3>মাসিক চাঁদা</h3>
-        <p>মাসিক জমার হিসাব</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">💵</div>
-        <h3>এককালীন চাঁদা</h3>
-        <p>এককালীন জমার হিসাব</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">📈</div>
-        <h3>বিনিয়োগ</h3>
-        <p>বিনিয়োগ ও লাভ-ক্ষতি</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🏦</div>
-        <h3>ঋণ</h3>
-        <p>ঋণ ও কিস্তির হিসাব</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">⚠️</div>
-        <h3>জরিমানা</h3>
-        <p>জরিমানার হিসাব</p>
-      </div>
-
+    <div class="card" onclick="showSection('payments')">
+      <div class="icon">💰</div>
+      <h3>মাসিক চাঁদা</h3>
+      <p>চাঁদা জমার হিসাব</p>
     </div>
 
-    <div class="admin">
-      <h3>🔐 অ্যাডমিন প্যানেল</h3>
-      <p>হিসাব পরিচালনার জন্য অ্যাডমিন লগইন করুন।</p>
-      <button onclick="alert('Admin Panel পরে যুক্ত করা হবে')">
-        Admin Login
-      </button>
+    <div class="card" onclick="showSection('notice')">
+      <div class="icon">📢</div>
+      <h3>নোটিশ বোর্ড</h3>
+      <p>গুরুত্বপূর্ণ ঘোষণা</p>
+    </div>
+
+    <div class="card" onclick="showSection('loan')">
+      <div class="icon">🛒</div>
+      <h3>সহায়তা/ঋণ</h3>
+      <p>পণ্য ক্রয়ের মাধ্যমে সহায়তা</p>
     </div>
 
   </div>
 
-  <footer>
-    © 2026 আল ফালাহ কল্যাণ সমিতি
-  </footer>
+  <div class="section" id="members">
+    <h2>👥 সদস্য তালিকা</h2>
+
+    <table>
+      <tr>
+        <th>ক্রম</th>
+        <th>নাম</th>
+        <th>অবস্থা</th>
+      </tr>
+
+      <tr>
+        <td>১</td>
+        <td>সোহাগ</td>
+        <td>সক্রিয়</td>
+      </tr>
+
+      <tr>
+        <td>২</td>
+        <td>সোহেল</td>
+        <td>সক্রিয়</td>
+      </tr>
+
+      <tr>
+        <td>৩</td>
+        <td>জামাল</td>
+        <td>সক্রিয়</td>
+      </tr>
+
+      <tr>
+        <td>৪</td>
+        <td>মোঃ আয়ান</td>
+        <td>সক্রিয়</td>
+      </tr>
+
+      <tr>
+        <td>৫</td>
+        <td>মোঃ শরিফ</td>
+        <td>সক্রিয়</td>
+      </tr>
+
+    </table>
+  </div>
+
+  <div class="section" id="payments">
+    <h2>💰 মাসিক চাঁদার হিসাব</h2>
+
+    <table>
+      <tr>
+        <th>নাম</th>
+        <th>চাঁদা</th>
+        <th>অবস্থা</th>
+      </tr>
+
+      <tr>
+        <td>সোহাগ</td>
+        <td>৫০০ টাকা</td>
+        <td>✅ জমা</td>
+      </tr>
+
+      <tr>
+        <td>সোহেল</td>
+        <td>৫০০ টাকা</td>
+        <td>✅ জমা</td>
+      </tr>
+
+      <tr>
+        <td>জামাল</td>
+        <td>৫০০ টাকা</td>
+        <td>✅ জমা</td>
+      </tr>
+
+      <tr>
+        <td>মোঃ শরিফ</td>
+        <td>১,০০০ টাকা</td>
+        <td>✅ জমা</td>
+      </tr>
+
+    </table>
+
+    <div class="total">
+      মাসিক চাঁদা: ৫০০ টাকা
+    </div>
+  </div>
+
+  <div class="section" id="notice">
+    <h2>📢 নোটিশ বোর্ড</h2>
+
+    <div class="notice">
+      📌 সকল সদস্যকে নিয়মিত মাসিক চাঁদা সময়মতো জমা দেওয়ার জন্য অনুরোধ করা হলো।
+    </div>
+
+    <div class="notice">
+      📌 সমিতির সকল কার্যক্রম শরীয়তসম্মতভাবে পরিচালনা করা হবে।
+    </div>
+
+    <div class="notice">
+      📌 গুরুত্বপূর্ণ সিদ্ধান্ত সদস্যদের মতামতের ভিত্তিতে গ্রহণ করা হবে।
+    </div>
+  </div>
+
+  <div class="section" id="loan">
+    <h2>🛒 সহায়তা / ঋণ ব্যবস্থা</h2>
+
+    <p style="line-height:1.9;">
+      সমিতি থেকে সরাসরি নগদ টাকা হাওলাত দেওয়ার পরিবর্তে
+      প্রয়োজনীয় জিনিসপত্র ক্রয় করে দেওয়ার মাধ্যমে সদস্যকে
+      সহায়তা করা হবে। সকল কার্যক্রম শরীয়তসম্মতভাবে পরিচালনা করা হবে।
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  <strong>🌿 আল ফালাহ কল্যাণ সমিতি</strong>
+  <br>
+  আল্লাহ আমাদের সকলের প্রচেষ্টায় বরকত দান করুন।
+  <br>
+  © 2026 Al Falah Kalyan Samiti
+</footer>
+
+<script>
+function showSection(id){
+  document.getElementById(id).scrollIntoView({
+    behavior:"smooth"
+  });
+}
+</script>
 
 </body>
 </html>
